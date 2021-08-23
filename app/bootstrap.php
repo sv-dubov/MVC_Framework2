@@ -1,5 +1,7 @@
 <?php
-// Load Core
-require_once 'core/core.php';
-require_once 'core/controller.php';
-require_once 'core/database.php';
+// Load Config
+require_once 'config/config.php';
+// Autoload Core
+spl_autoload_register(function ($className) {
+    require_once 'core/' . $className . '.php';
+});
