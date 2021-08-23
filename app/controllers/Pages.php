@@ -10,13 +10,18 @@ class Pages extends Controller
     public function index()
     {
         $data = [
-            'title' => 'Welcome'
+            'title' => 'Welcome',
+            'description' => 'Simple MVC PHP framework'
         ];
         $this->view('pages/index', $data);
     }
 
-    public function about($id)
+    public function about()
     {
-        echo $id;
+        $data = [
+            'title' => 'About Us',
+            'description' => 'Share your news!'
+        ];
+        $this->view('pages/about', $data);
     }
 }
